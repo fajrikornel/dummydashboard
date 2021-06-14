@@ -33,8 +33,10 @@
                 title: 'X Data',
             },
             scales: {
-                min: 25,
-                max: 125,
+                y: {
+                    min: 25,
+                    max: 125,
+                }
             },
         },
     });
@@ -53,8 +55,10 @@
                 title: 'Y Data',
             },
             scales: {
-                min: 40,
-                max: 120,
+                y: {
+                    min: 25,
+                    max: 125,
+                }
             },
         },
     });
@@ -62,15 +66,19 @@
     let updateData = async () => {
         let response = await fetch('{{route('api.data')}}');
         let data = await response.json();
-        chartX.data.labels = data.data.map((obj) => {return (new Date(obj['created_at'])).toLocaleTimeString()});
-        chartY.data.labels = data.data.map((obj) => {return (new Date(obj['created_at'])).toLocaleTimeString()});
+        chartX.data.labels = data.data.map((obj) => {
+            return (new Date(obj['created_at'])).toLocaleTimeString()
+        }).reverse();
+        chartY.data.labels = data.data.map((obj) => {
+            return (new Date(obj['created_at'])).toLocaleTimeString()
+        }).reverse();
         chartX.data.datasets[0].data = data.data.map((obj) => {return obj['X']});
         chartY.data.datasets[0].data = data.data.map((obj) => {return obj['Y']});
         chartX.update()
         chartY.update()
     };
     updateData();
-    setInterval(updateData,1000);
+    setInterval(updateData,2000);
 </script>
 
 @endsection

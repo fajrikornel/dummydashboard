@@ -16,7 +16,7 @@ class DataController extends Controller
         
         $jsonData = (object) array(
             'name' => 'dummy data',
-            'data' => Data::latest()->select('X','Y')->take(10)->get());        
+            'data' => Data::latest()->select('created_at','X','Y')->take(25)->get());        
 
         return json_encode($jsonData);
     }

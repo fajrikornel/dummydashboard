@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DataController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('data',function() {
-    return;
-})->name('api.data');
+Route::get('data', [DataController::class,'data'])->name('api.data');

@@ -7,7 +7,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Dummy Dashboard</title>
 </head>
-<body>
+<body class="bg-blue-100">
     <nav class="">
         <div class="flex justify-between bg-red-500 p-5">
             <ul class="flex text-white">
@@ -27,7 +27,9 @@
                 </li>
             </ul>
         </div>
-        @yield('content')
+        <div class="container flex justify-center">
+            @yield('content')
+        </div>
     </nav>
 </body>
 @yield('script')

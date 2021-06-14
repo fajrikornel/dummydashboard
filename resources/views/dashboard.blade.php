@@ -72,8 +72,8 @@
         chartY.data.labels = data.data.map((obj) => {
             return (new Date(obj['created_at'])).toLocaleTimeString()
         }).reverse();
-        chartX.data.datasets[0].data = data.data.map((obj) => {return obj['X']});
-        chartY.data.datasets[0].data = data.data.map((obj) => {return obj['Y']});
+        chartX.data.datasets[0].data = data.data.map((obj) => {return obj['X']}).reverse();
+        chartY.data.datasets[0].data = data.data.map((obj) => {return obj['Y']}).reverse();
         chartX.update()
         chartY.update()
     };

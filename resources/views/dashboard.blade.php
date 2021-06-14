@@ -15,7 +15,7 @@
 @endsection
 
 @section('script')
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{asset('chart.js/chart.js')}}"></script>
 <script>
     let ctxX = document.getElementById('dataX');
     let ctxY = document.getElementById('dataY');

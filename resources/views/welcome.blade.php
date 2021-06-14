@@ -31,6 +31,6 @@
             @yield('content')
         </div>
     </nav>
+    @yield('script')
 </body>
-@yield('script')
 </html>

@@ -6,10 +6,10 @@ Dashboard that displays dummy 'live' data. Built on top of PHP with Laravel.
 1. Clone the git repository
 2. Build repository using:
 
-       npm install
        composer install
+       npm install
     
-4. Create the .env file containing database and app key variables
+4. Create the .env file that must database and app key variables
 5. Migrate the database:
 
        php artisan migrate:fresh

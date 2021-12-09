@@ -27,6 +27,11 @@ Dashboard that displays dummy 'live' data. Built on top of PHP with Laravel.
 | DB_USERNAME          | The database username |
 | DB_PASSWORD          | The database password |
 
+ALTERNATIVELY, you can set these variables in your system environment variables and then run the following command:
+
+       php artisan config:cache
+
+
 7. Generate the app key by running:
 
        php artisan key:generate
@@ -38,6 +43,8 @@ Dashboard that displays dummy 'live' data. Built on top of PHP with Laravel.
 9. Run the dummy dashboard:
 
        php artisan serve
+
+Or you can use a server like NGINX if you like.
 
 10. Open it in your favorite browser.
 

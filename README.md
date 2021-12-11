@@ -58,3 +58,7 @@ Or you can use a server like NGINX if you like.
 ## Preview
 
 ![Dashboard Preview](./misc/preview.png)
+
+## Deploying the app
+
+I've created a repository that deals with deploying this dashboard using Docker and automation scripts. Refer to this [link](https://github.com/fajrikornel/docker-laravel-deploy).
